@@ -99,3 +99,7 @@ function validateForm() {
 
   return isValid;
 }
+
+
+// Footer: (Dynamic Year)
+document.querySelector(".currentYear").innerHTML = new Date().getFullYear();

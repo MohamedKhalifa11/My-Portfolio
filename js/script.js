@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Projects Section
 async function fetchProjcts() {
   try {
-    const response = await fetch("../api/projects-api.json");
+    const response = await fetch("https://mohamedkhalifa11.github.io/my-projects-api/projects-api.json");
     const projects = await response.json();
     const projectContainer = document.getElementById("project-container");
     const projectsHTML = projects

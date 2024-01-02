@@ -63,6 +63,53 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Projects Section
+async function fetchProjcts() {
+  try {
+    const response = await fetch("../api/projects-api.json");
+    const projects = await response.json();
+    const projectContainer = document.getElementById("project-container");
+    const projectsHTML = projects
+      .map(
+        (project) =>
+          `
+    <div class="project-card">
+    <div class="project-image">
+      <img src="${project.image}" />
+      <a
+        href="${project.demo}"
+        class="demo-button"
+        target="_blank"
+        >View Demo</a
+      >
+    </div>
+    <div class="project-info">
+      <p class="project-desc">
+        ${project.description}
+      </p>
+      <div class="project-title">
+        <h4>${project.title}</h4>
+        <a
+          href="${project.repo}"
+          class="source-code"
+          target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+    `
+      )
+      .join("");
+
+    projectContainer.innerHTML = projectsHTML;
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+  }
+}
+
+fetchProjcts();
+
 // Contact Form: Validation Form
 function validateForm() {
   let name = document.getElementById("name").value;
@@ -99,7 +146,6 @@ function validateForm() {
 
   return isValid;
 }
-
 
 // Footer: (Dynamic Year)
 document.querySelector(".currentYear").innerHTML = new Date().getFullYear();

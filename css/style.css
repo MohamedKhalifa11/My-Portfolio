@@ -97,6 +97,7 @@ section .container {
 .main-info {
     width: 400px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     row-gap: 20px;
 }
@@ -117,7 +118,7 @@ section .container {
 
 .social-icons {
     display: flex;
-    column-gap: 25px;
+    column-gap: 50px;
 }
 
 .linkedin:hover {
@@ -143,6 +144,7 @@ section .container {
     font-size: 1em;
     font-weight: 600;
     display: inline-block;
+    width: fit-content;
     padding: 0.9375em 2.1875em;
     letter-spacing: 1px;
     border-radius: 25px;
@@ -157,7 +159,7 @@ section .container {
 .main-info .social-icons a {
     color: var(--text);
     font-size: 1.7em;
-    padding-right: 30px;
+    /* padding-right: 30px; */
 }
 
 .main-image img {
@@ -558,7 +560,21 @@ form input[type="submit"]:hover {
 
 @media (max-width:767px) {
     .main .container {
-        justify-content: start;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main .main-info {
+        text-align: center;
+        /* width: 100%; */
+    }
+
+    .main .main-info .social-icons {
+        margin: 0 auto;
+    }
+
+    .main .main-info .resume-btn {
+        margin: 0 auto;
     }
 
     .main-image {
@@ -640,12 +656,12 @@ form input[type="submit"]:hover {
 }
 
 @media (max-width:375px) {
-    .main-info {
+    /* .main-info {
         font-size: x-small;
-    }
+    } */
 
     .social-icons {
-        column-gap: 10px;
+        column-gap: 30px;
     }
 
     /* .contact .card {

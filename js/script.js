@@ -54,14 +54,14 @@ sections.forEach((section) => {
 });
 
 // Main Info: Auto Type
-document.addEventListener("DOMContentLoaded", function () {
-  let typed = new Typed(".auto-type", {
-    strings: ["Frontend Developer", "UI/UX Designer"],
-    typeSpeed: 50,
-    backSpeed: 100,
-    loop: true,
-  });
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   let typed = new Typed(".auto-type", {
+//     strings: ["Frontend Developer", "Software Developer"],
+//     typeSpeed: 50,
+//     backSpeed: 100,
+//     loop: true,
+//   });
+// });
 
 // Projects Section
 async function fetchProjcts() {

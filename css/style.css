@@ -267,7 +267,7 @@ section .container {
     /* width: 21.25em; */
     max-width: 21.25em;
     min-width: 300px;
-    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    /* box-shadow: 0 0 5px rgba(1 1 1 / 15%); */
     border-radius: 10px;
     padding: 25px;
     margin: 15px;
@@ -405,7 +405,7 @@ section .container {
     background-color: var(--content);
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    /* box-shadow: 0 5px 25px rgba(1 1 1 / 15%); */
 }
 
 form input[type="text"],
